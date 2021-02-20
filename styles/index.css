@@ -5,10 +5,15 @@ button.top-button {
     float: right;
 }
 body {
-    background-image: url('../images/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    enable-background: accumulate; 
+   background-image: url('../images/background.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center center;
+   background-size: cover;
+   margin: 0;
+   overflow:hidden;
+   display: block;
+   height: 100%;
 }
 #logoTitle {
     font-family: 'Montez', cursive; 
