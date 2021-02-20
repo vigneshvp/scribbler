@@ -1,0 +1,29 @@
+input.topButtons {
+    margin-right: 10 px;
+    float:right;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+body {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    enable-background: accumulate; 
+}
+#logoTitle {
+    font-family: 'Montez', cursive; 
+    font-size: xx-large;
+    color: blue;
+    margin-bottom: 0%;
+}
+p.middleText {
+    margin-top: 0%;
+    font-family: 'Ubuntu Mono', monospace;
+    color: black;
+    font-size: small;
+}
+a.logo-title {
+    text-decoration: none;
+}
