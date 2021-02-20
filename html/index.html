@@ -18,7 +18,7 @@
     </div> 
     <div id = "posts" class = "flex-parent jc-center">
         <button type="submit" class = "posts-button margin-right">All Posts</button>
-        <button type="submit" class = "posts-button">Create Post</button>
+        <button type="submit" class = "posts-button" onclick="showCreatePost()">Create Post</button>
     </div>
 
     <div>
@@ -66,6 +66,26 @@
         </div>
         </div>
       </div>
+
+      <div>
+        <div class="modal" id="create-post-modal">
+  
+          <div class="post-modal-content">
+  
+            <div class="modal-head">
+              <span onclick="hideCreatePostModal()" id="close" class="close">&times;</span>
+              <h2 class="modal-title">Pen your post</h2>
+            </div>
+            <form id=create-post-form>
+              <label for="tile" class="label-text">Title</label>
+              <input type="text" id="title" placeholder="Enter title of your post" required>
+              <label for="content" class="label-text">Content</label>
+              <textarea cols="50" rows="15" name="post-details" form="create-post-form" placeholder="Enter the content for your post"></textarea>
+              <button type="submit" class="create-btn">Create</button>
+            </form>
+          </div>
+        </div>
+    </div>
 
       <script src="../scripts/index.js"></script>
 
