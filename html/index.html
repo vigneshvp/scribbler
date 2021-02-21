@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="../styles/index.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="header">
+        <button type="submit" class = "top-button margin-right" onclick="showSignUpModal()">Sign Up</button>
+        <button type="submit" class = "top-button" onclick="showSignInModal()">Sign In</button>
+        <a class="logo-title" href="index.html"><div id="logoTitle">Scribbler</div></a>
+        <p class="middleText">Explore, Imagine, Create</p>
+    </div> 
+    <div id = "posts" class = "flex-parent jc-center">
+        <button type="submit" class = "posts-button margin-right">All Posts</button>
+        <button type="submit" class = "posts-button" onclick="showCreatePost()">Create Post</button>
+    </div>
+
+    <div>
+        <div class="modal" id="signin-modal">
+          <div class="modal-content">
+  
+          <div class="modal-head">
+            <span onclick="hideSignInModal()" id="close" class="close">&times;</span>
+            <h2 class="modal-title">Welcome Back!</h2>
+          </div>
+          <hr>
+          <form>
+            <label for="username" class="label-text">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <label for="password" class="label-text">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit" onclick="signin(username, password)" class="signin-btn">Sign In</button>
+          </form>
+          <p class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal()" class=signup>Sign Up</span></p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Insert code for Sign Up modal here -->
+    <div>
+        <div class="modal" id="signup-modal">
+          <div class="modal-content">
+  
+          <div class="modal-head">
+            <span onclick="hideSignUpModal()" id="close" class="close">&times;</span>
+            <h2 class="modal-title">Get Started</h2>
+          </div>
+          <hr>
+          <form>
+            <label for="fullname" class="label-text">Full name</label>
+            <input type="text" id="fullname" placeholder="Enter your Name" required>
+            <label for="username" class="label-text">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <label for="password" class="label-text">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <label for="confirmpassword" class="label-text">Confirm Password</label>
+            <input type="password" id="confirm_password" placeholder="Re-enter your Password" required>
+            <button type="submit" class="signin-btn">Sign up</button>
+          </form>
+        </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="modal" id="create-post-modal">
+  
+          <div class="post-modal-content">
+  
+            <div class="modal-head">
+              <span onclick="hideCreatePostModal()" id="close" class="close">&times;</span>
+              <h2 class="modal-title">Pen your post</h2>
+            </div>
+            <form id=create-post-form>
+              <label for="tile" class="label-text">Title</label>
+              <input type="text" id="title" placeholder="Enter title of your post" required>
+              <label for="content" class="label-text">Content</label>
+              <textarea cols="50" rows="15" name="post-details" form="create-post-form" placeholder="Enter the content for your post"></textarea>
+              <button type="submit" class="create-btn">Create</button>
+            </form>
+          </div>
+        </div>
+    </div>
+
+      <script src="../scripts/index.js"></script>
+
+</body>
+
+</html>
