@@ -1,4 +1,4 @@
-function navigateToPost() {
+function viewPostDetails() {
     location.href = "post.html";
 }
 
