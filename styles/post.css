@@ -67,5 +67,20 @@
     display:table-cell;
     overflow: scroll;
   }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    width: 100%;
+    border-spacing: 10px;
+    background-color: gray;
+  }
   
-/* Set a style for all the remaining elements like Like button, Edit button, Comment button and so on. */
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border-spacing: 10px;
+    background-color: white;
+  }
+  

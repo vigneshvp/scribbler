@@ -91,7 +91,7 @@ function addComment(){
   var x = document.getElementById("txtCommentCommentPost").value;
   
   console.log(x);
-  var pElement = '<p>'+ x + '</p><br/>';
-  var getDiv = document.getElementById('eachComment');
+  var pElement = '<td>'+ x + '</td>';
+  var getDiv = document.getElementById('comments-table');
   getDiv.innerHTML = pElement + getDiv.innerHTML;
 }
