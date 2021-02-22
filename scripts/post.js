@@ -3,6 +3,7 @@ function onLoad() {
   document.getElementsByClassName('postAuthor')[0].innerHTML = sessionStorage.getItem('postUserName');
   document.getElementById('blogTitleNew').innerHTML = sessionStorage.getItem('postTitle');
   document.getElementById('blogBody').innerHTML = sessionStorage.getItem('postDesc');
+  document.getElementById('counterLikedBy').innerHTML = 'Be the first one to like this!';
 }
 function editComment(){
   
@@ -11,9 +12,15 @@ function editComment(){
 
 function incrementCounter(){
   var cntr = document.getElementById('counterLikedBy');
-  var val = parseInt(cntr.innerText);
-  cntr.innerText = val+1;
-
+  var sentence = cntr.innerText.split(" ");
+  var val = sentence[0];
+  if(val == 'Be')
+     cntr.innerHTML = '1 person likes this!';
+  else 
+     {
+     var numberOfLikes = parseInt(val) + 1;
+     cntr.innerHTML = numberOfLikes + ' persons likes this!'; }
+  document.getElementsByClassName('postLike')[0].innerHTML = '<i style="font-size: 14px;font-weight: bolder;" class="fa fa-thumbs-up" aria-hidden="true"></i>' + ' Liked';   
 }
 
 function toggleEditSave(){
