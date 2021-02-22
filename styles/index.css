@@ -105,8 +105,8 @@ button.posts-button {
   }
   
   .modal-title{
-    align-self: center;
-    font-family: Abel;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
   }
   
   .signin-btn {
