@@ -18,7 +18,7 @@ function showSignInModal(){
     modal.style.display = "none";
   }
 
-  function showCreatePost(){
+  function showCreatePostModal(){
     var modal = document.getElementById("create-post-modal");
     modal.style.display = "flex";
   }
