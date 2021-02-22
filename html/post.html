@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.css" rel="stylesheet"> -->
+    <link href="../styles/index.css" rel="stylesheet"/>
+    <link href="../styles/post.css" rel="stylesheet"/>
+    <!-- Font Awesome-->
+    <link href="../styles/css/all.css" rel="stylesheet"/>
+</head>
+
+<body style="background-color: white;background-image: none;">
+    <div class="header">
+        <button type="submit" class = "top-button margin-right" onclick="showSignUpModal()">Sign Up</button>
+        <button type="submit" class = "top-button" onclick="showSignInModal()">Sign In</button>
+        <a class="logo-title" href="index.html"><div id="logoTitle">ScriBBler</div></a>
+        <p class="middleText">Explore, Imagine, Create</p>
+    </div> 
+    <div>
+        <div class="modal" id="signin-modal">
+          <div class="modal-content">
+  
+          <div class="modal-head">
+            <span onclick="hideSignInModal()" id="close" class="close">&times;</span>
+            <h2 class="modal-title">Welcome Back!</h2>
+          </div>
+          <hr>
+          <form>
+            <label for="username" class="label-text">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <label for="password" class="label-text">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit" onclick="signin(username, password)" class="signin-btn">Sign In</button>
+          </form>
+          <p class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal()" class=signup>Sign Up</span></p>
+        </div>
+        </div>
+      </div>
+
+      <!-- Insert code for Sign Up modal here -->
+    <div>
+        <div class="modal" id="signup-modal">
+          <div class="modal-content">
+  
+          <div class="modal-head">
+            <span onclick="hideSignUpModal()" id="close" class="close">&times;</span>
+            <h2 class="modal-title">Get Started</h2>
+          </div>
+          <hr>
+          <form>
+            <label for="fullname" class="label-text">Full name</label>
+            <input type="text" id="fullname" placeholder="Enter your Name" required>
+            <label for="username" class="label-text">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <label for="password" class="label-text">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <label for="confirmpassword" class="label-text">Confirm Password</label>
+            <input type="password" id="confirm_password" placeholder="Re-enter your Password" required>
+            <button type="submit" class="signin-btn">Sign up</button>
+          </form>
+        </div>
+        </div>
+      </div>
+
+
+    <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
+
+    <div class="postMainLayout">
+        <div class="blogContent">
+            <div id="blogTitle" class="blogTite">
+                <h id="blogTitleNew">‘let’ me be a ‘const’(ant), not a ‘var’(iable)</h>
+            </div>
+        </div>
+        <div class="blogAuthor">
+            <!-- Insert code for Edit/Save button and  -->
+            <p class="postAuthor">Srishti Gupta</p>
+            <div id="editPost" onclick="toggleEditSave()">
+                    <button class="postEdit" id ="edtPstBtn">Edit
+                            <i style="font-size: 14px;font-weight: bolder;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </button>
+            </div>
+        </div>
+
+        <div class="blogText" id="blogBodyId">
+            <p id="blogBody">
+                Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. 
+                Though all the three keywords are used for the same purpose, they are different.
+            </p>
+        </div>
+        <div>
+        <button class="postLike" onclick="incrementCounter()">Like
+            <i style="font-size: 14px;font-weight: bolder;" class="fa fa-thumbs-up" aria-hidden="true"></i>
+
+        </button>
+        <p style="font-size: 10px; font-family: 'Abel', sans-serif;padding-left: 5px">
+            <spna style="font-size: 10px; font-family: 'Abel', sans-serif;padding-left: 5px" id="counterLikedBy">1</spna> person likes this!</p>
+        <div style="font-family: 'Abel', sans-serif; padding-left: 5px">Be the first one to like this!</div>
+        </div>
+
+
+        <div class="commentPost">
+            <textarea id="txtCommentCommentPost" class="commentPost" rows="4" cols="100" placeholder="Leave a comment"></textarea>
+        </div>
+        <button class="postLike" onclick="addComment()">Comment</button>
+        <div class="commentSection">
+            <h3>All Comments</h3>
+            <div class="allComments" id="listAllComments">
+                <table id="comments-table">
+                </table>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/post.js"></script>
+
+</body>
+
+</html>
