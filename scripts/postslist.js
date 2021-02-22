@@ -1,4 +1,10 @@
-function viewPostDetails() {
+function viewPostDetails(index) {
+    var postUserName = document.getElementsByClassName('post-username')[index].innerHTML;
+    var postTitle = document.getElementsByClassName('post-title')[index].innerHTML;
+    var postDesc = document.getElementsByClassName('post-desc')[index].innerHTML;
+    sessionStorage.setItem("postUserName",postUserName);
+    sessionStorage.setItem("postTitle",postTitle);
+    sessionStorage.setItem("postDesc",postDesc);
     location.href = "post.html";
 }
 
