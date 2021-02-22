@@ -1,121 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link href="../styles/common.css" rel="stylesheet"/>
-    <link href="../styles/post.css" rel="stylesheet"/>
-    <!-- Font Awesome-->
-    <link href="../styles/fontawesome/css/all.css" rel="stylesheet"/>
+  <title>Post</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link href="../styles/common.css" rel="stylesheet"/>
+  <link href="../styles/post.css" rel="stylesheet"/>
+  <!-- Font Awesome-->
+  <link href="../styles/fontawesome/css/all.css" rel="stylesheet"/>
 </head>
 
-<body style="background-color: white;background-image: none;" onload="onLoad()">
-  
-  <!-- Header -->
-  <div class="header">
-    <button type="submit" class = "top-button margin-right" onclick="showSignUpModal()">Sign Up</button>
-    <button type="submit" class = "top-button" onclick="showSignInModal()">Sign In</button>
-    <a class="logo-title" href="index.html"><div id="logoTitle">ScriBBler</div></a>
-    <p class="middleText">Explore, Imagine, Create</p>
-</div> 
+<body onload="onLoad()" style="background-color: white;background-image: none;">
 
-<!-- Modal for Signin Post--> 
+<!-- Header -->
+<div class="header">
+  <button class="top-button margin-right" onclick="showSignUpModal()" type="submit">Sign Up</button>
+  <button class="top-button" onclick="showSignInModal()" type="submit">Sign In</button>
+  <a class="logo-title" href="index.html">
+    <div id="logoTitle">ScriBBler</div>
+  </a>
+  <p class="middleText">Explore, Imagine, Create</p>
+</div>
+
+<!-- Modal for Signin Post-->
 <div>
-    <div class="modal" id="signin-modal">
-      <div class="modal-content">
+  <div class="modal" id="signin-modal">
+    <div class="modal-content">
       <div class="modal-head">
-        <span onclick="hideSignInModal()" id="close" class="close">
-          <i class="fas fa-times"></i>
-        </span>  
+            <span class="close" id="close1" onclick="hideSignInModal()">
+              <i class="fas fa-times"></i>
+            </span>
         <h2 class="modal-title">Welcome Back!</h2>
       </div>
       <hr>
       <form>
-        <label for="username" class="label-text">Username</label>
-        <input type="text" id="username" placeholder="Enter your username" required>
-        <label for="password" class="label-text">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required>
-        <button type="submit" class="signin-btn">Sign In</button>
+        <label class="label-text" for="username">Username</label>
+        <input id="username" placeholder="Enter your username" required type="text">
+        <label class="label-text" for="password">Password</label>
+        <input id="password" placeholder="Enter your password" required type="password">
+        <button class="signin-btn" type="submit">Sign In</button>
       </form>
-      <p class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal()" class=signup>Sign Up</span></p>
-    </div>
+      <p class=bottom-banner>Not a member?<span class=signup
+                                                onclick="hideSignInModal();showSignUpModal()">Sign Up</span>
+      </p>
     </div>
   </div>
+</div>
 
-  <!-- Modal for Signup Post--> 
+<!-- Modal for Signup Post-->
 <div>
-    <div class="modal" id="signup-modal">
-      <div class="modal-content">
+  <div class="modal" id="signup-modal">
+    <div class="modal-content">
 
       <div class="modal-head">
-        <span onclick="hideSignUpModal()" id="close" class="close">
-          <i class="fas fa-times"></i>
-        </span>
+            <span class="close" id="close2" onclick="hideSignUpModal()">
+              <i class="fas fa-times"></i>
+            </span>
         <h2 class="modal-title">Get Started</h2>
       </div>
       <hr>
       <form>
-        <label for="fullname" class="label-text">Full name</label>
-        <input type="text" id="fullname" placeholder="Enter your name" required>
-        <label for="username" class="label-text">Username</label>
-        <input type="text" id="username" placeholder="Enter your username" required>
-        <label for="password" class="label-text">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required>
-        <label for="confirmpassword" class="label-text">Confirm Password</label>
-        <input type="password" id="confirm_password" placeholder="Re-enter your Password" required>
-        <button type="submit" class="signin-btn">Sign up</button>
+        <label class="label-text" for="fullname">Full name</label>
+        <input id="fullname" placeholder="Enter your name" required type="text">
+        <label class="label-text" for="username1">Username</label>
+        <input id="username1" placeholder="Enter your username" required type="text">
+        <label class="label-text" for="password1">Password</label>
+        <input id="password1" placeholder="Enter your password" required type="password">
+        <label class="label-text" for="confirm_password">Confirm Password</label>
+        <input id="confirm_password" placeholder="Re-enter your Password" required type="password">
+        <button class="signin-btn" type="submit">Sign up</button>
       </form>
     </div>
+  </div>
+</div>
+
+<!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
+
+<div class="postMainLayout">
+  <div class="blogContent">
+    <div class="blog-title" id="blogTitle">
+      <h2 id="blogTitleNew"></h2>
+    </div>
+  </div>
+  <div class="blog-author">
+    <!-- Insert code for Edit/Save button and  -->
+    <p class="post-author"></p>
+    <div id="editPost" onclick="toggleEditSave()">
+      <button class="post-edit" id="edtPstBtn">Edit &nbsp;
+        <i aria-hidden="true" class="fa fa-pencil" style="font-size: 14px;font-weight: bolder;"></i>
+      </button>
     </div>
   </div>
 
-    <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
+  <div class="blog-text" id="blogBodyId">
+    <p id="blogBody"></p>
+  </div>
+  <div>
+    <button class="post-like" onclick="incrementCounter()">
+      <i aria-hidden="true" class="fa fa-thumbs-up"
+         style="font-size: 14px;font-weight: bolder;"></i>
+      Like
+    </button>
+    <p id="counterLikedBy"
+       style="font-size: 15px; font-family: 'Times New Roman', sans-serif;padding-left: 5px"></p>
+  </div>
 
-    <div class="postMainLayout">
-        <div class="blogContent">
-            <div id="blogTitle" class="blogTite">
-                <h id="blogTitleNew"></h>
-            </div>
-        </div>
-        <div class="blogAuthor">
-            <!-- Insert code for Edit/Save button and  -->
-            <p class="postAuthor"></p>
-            <div id="editPost" onclick="toggleEditSave()">
-                    <button class="postEdit" id ="edtPstBtn">Edit
-                            <i style="font-size: 14px;font-weight: bolder;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    </button>
-            </div>
-        </div>
-
-        <div class="blogText" id="blogBodyId">
-            <p id="blogBody"></p>
-        </div>
-        <div>
-        <button class="postLike" onclick="incrementCounter()">
-            <i style="font-size: 14px;font-weight: bolder;" class="fa fa-thumbs-up" aria-hidden="true"></i>
-            Like
-        </button>
-        <p style="font-size: 15px; font-family: 'Times New Roman', sans-serif;padding-left: 5px" id="counterLikedBy"/>
-        </div>
-
-        <div class="commentPost">
-            <textarea id="txtCommentCommentPost" class="commentPost" rows="4" cols="100" placeholder="Leave a comment"></textarea>
-        </div>
-        <button class="postLike" onclick="addComment()">Comment</button>
-        <div class="commentSection">
-            <h3>All Comments</h3>
-            <div class="allComments" id="listAllComments">
-                <table id="comments-table">
-                </table>
-                
-            </div>
-        </div>
-
+  <div class="comment">
+    <textarea class="commentPost" cols="100" id="txtCommentCommentPost"
+              placeholder="Leave a comment"
+              rows="4"></textarea>
+  </div>
+  <button class="postLike" onclick="addComment()">Comment</button>
+  <div class="commentSection">
+    <h3>All Comments</h3>
+    <div class="allComments" id="listAllComments">
+      <table id="comments-table">
+      </table>
     </div>
+  </div>
 
-    <script src="../scripts/common.js"></script>
-    <script src="../scripts/post.js"></script>
+</div>
+
+<script src="../scripts/common.js"></script>
+<script src="../scripts/post.js"></script>
 
 </body>
 
