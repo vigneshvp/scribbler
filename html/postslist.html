@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-   <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.css" rel="stylesheet"> -->
-    <link href="../styles/index.css" rel="stylesheet"/>
+    <link href="../styles/common.css" rel="stylesheet"/>
     <link href="../styles/postslist.css" rel="stylesheet"/>
     <!-- Font Awesome-->
     <link href="../styles/fontawesome/css/all.css" rel="stylesheet"/>
@@ -20,12 +18,14 @@
     </div> 
 
 
+    <!-- Modal for Signin Post--> 
     <div>
         <div class="modal" id="signin-modal">
           <div class="modal-content">
-  
           <div class="modal-head">
-            <span onclick="hideSignInModal()" id="close" class="close">&times;</span>
+            <span onclick="hideSignInModal()" id="close" class="close">
+              <i class="fas fa-times"></i>
+            </span>  
             <h2 class="modal-title">Welcome Back!</h2>
           </div>
           <hr>
@@ -34,26 +34,28 @@
             <input type="text" id="username" placeholder="Enter your username" required>
             <label for="password" class="label-text">Password</label>
             <input type="password" id="password" placeholder="Enter your password" required>
-            <button type="submit" onclick="signin(username, password)" class="signin-btn">Sign In</button>
+            <button type="submit" class="signin-btn">Sign In</button>
           </form>
           <p class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal()" class=signup>Sign Up</span></p>
         </div>
         </div>
       </div>
 
-      <!-- Insert code for Sign Up modal here -->
+      <!-- Modal for Signup Post--> 
     <div>
         <div class="modal" id="signup-modal">
           <div class="modal-content">
   
           <div class="modal-head">
-            <span onclick="hideSignUpModal()" id="close" class="close">&times;</span>
+            <span onclick="hideSignUpModal()" id="close" class="close">
+              <i class="fas fa-times"></i>
+            </span>
             <h2 class="modal-title">Get Started</h2>
           </div>
           <hr>
           <form>
             <label for="fullname" class="label-text">Full name</label>
-            <input type="text" id="fullname" placeholder="Enter your Name" required>
+            <input type="text" id="fullname" placeholder="Enter your name" required>
             <label for="username" class="label-text">Username</label>
             <input type="text" id="username" placeholder="Enter your username" required>
             <label for="password" class="label-text">Password</label>
@@ -65,6 +67,7 @@
         </div>
         </div>
       </div>
+
 
 
     <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
@@ -203,7 +206,7 @@
     </div>
     <!-- list of all posts ends here -->
 
-    <script src="../scripts/index.js"></script>
+    <script src="../scripts/common.js"></script>
     <script src="../scripts/postslist.js"></script>
 
 </body>

@@ -10,6 +10,18 @@ body {
    height: 100%;
 }
 
+.flex-parent {
+  display: flex;
+}
+.jc-center {
+  justify-content: center;
+}
+
+button.posts-button {
+  text-align: center;
+  background-color: yellow;
+}
+
 .create-btn{
     margin-top: 10px;
     background-color: green;
@@ -20,6 +32,12 @@ body {
     align-self: center;
     font-family: 'Times New Roman', Times, serif;
  }
+
+ #posts {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
 
 .post-modal-content{
     background-color: white;

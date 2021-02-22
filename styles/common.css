@@ -24,23 +24,9 @@ p.middleText {
 a.logo-title {
     text-decoration: none;
 }
-.flex-parent {
-    display: flex;
-}
-.jc-center {
-    justify-content: center;
-}
+
 button.margin-right {
     margin-right: 10px;
-}
-button.posts-button {
-    text-align: center;
-    background-color: yellow;
-}
-#posts {
-    position: fixed;
-    top: 50%;
-    left: 50%;
 }
 .modal {
     display: none;
