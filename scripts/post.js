@@ -36,6 +36,7 @@ function toggleEditSave(){
   '<i style="font-size: 14px;font-weight: bolder;" '+
   'class="fa fa-pencil-square-o" aria-hidden="true"></i>'+
   '</button>';
+  var headingWithBorder = ''
 
   var edtSaveBtn = document.getElementById('editPost');
   var toDo = (edtSaveBtn.innerText).toString().trim();
@@ -45,6 +46,9 @@ function toggleEditSave(){
     console.log("Currently Edit");
     var bSave = document.getElementById('editPost');
     bSave.innerHTML = toggleSave;
+    var blogTitle = document.getElementById('blogTitle');
+    blogTitle.style.borderStyle = "solid";
+    blogTitle.style.borderColor = "pink";
     enableEditableText();
 
   }
@@ -52,6 +56,9 @@ function toggleEditSave(){
     console.log("Currently Save");
     var bEdit = document.getElementById('editPost');
     bEdit.innerHTML = toggleEdit;
+    var blogTitle = document.getElementById('blogTitle');
+    blogTitle.style.borderStyle = "none";
+    blogTitle.style.borderColor = "none";
     updateEditedBlog();
   }
 
@@ -60,11 +67,11 @@ function toggleEditSave(){
 function enableEditableText(){
   var getBlogContentEle = document.getElementById('blogBody');
   var getBlogContent = getBlogContentEle.innerText;
-
+  
   //Div element
   var getDiv = document.getElementById('blogBodyId');
   //Create a input element
-  var inputElement = '<textarea class="txtBlog" id="txtEditedBlog" rows="10" cols="220">'+
+  var inputElement = '<textarea class="txtBlog" id="txtEditedBlog" rows="10" cols="150">'+
   getBlogContent+
   '</textarea>'
   //Update the Div element
@@ -72,9 +79,7 @@ function enableEditableText(){
 }
 function updateEditedBlog(){
   var editedBlog = document.getElementById('txtEditedBlog');
-
   var textEdited = (editedBlog.innerHTML).toString();
-  
   var pElement = '<p id="blogBody">'+
   textEdited+
   '</p>';

@@ -14,7 +14,7 @@
     flex-direction: row;
     padding: 0px 0px 0px 10px;
     font-family: 'Niconne', cursive;
-    font-size: 30px;
+    font-size: 20px;
     display:table-row;
     justify-content: space-between;
 }
@@ -66,6 +66,8 @@
   .txtBlog{
     display:table-cell;
     overflow: scroll;
+    border-style: solid;
+    border-color: pink;
   }
 
   table {
