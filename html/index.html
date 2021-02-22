@@ -2,11 +2,10 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link href="../styles/index.css" rel="stylesheet"/>
+    <!--Locally downloaded distribution of FontAwesome-->
     <link href="../styles/fontawesome/css/all.css" rel="stylesheet"/>
 </head>
 
@@ -18,7 +17,7 @@
         <p class="middleText">Explore, Imagine, Create</p>
     </div> 
     <div id = "posts" class = "flex-parent jc-center">
-        <button type="submit" class = "posts-button margin-right">All Posts</button>
+        <button type="submit" class = "posts-button margin-right" onclick="viewAllPosts()">All Posts</button>
         <button type="submit" class = "posts-button" onclick="showCreatePost()">Create Post</button>
     </div>
 
@@ -59,7 +58,7 @@
           <hr>
           <form>
             <label for="fullname" class="label-text">Full name</label>
-            <input type="text" id="fullname" placeholder="Enter your Name" required>
+            <input type="text" id="fullname" placeholder="Enter your name" required>
             <label for="username" class="label-text">Username</label>
             <input type="text" id="username" placeholder="Enter your username" required>
             <label for="password" class="label-text">Password</label>
@@ -87,7 +86,7 @@
               <label for="tile" class="label-text">Title</label>
               <input type="text" id="title" placeholder="Enter title of your post" required>
               <label for="content" class="label-text">Content</label>
-              <textarea cols="50" rows="15" name="post-details" form="create-post-form" placeholder="Enter the content for your post"></textarea>
+              <textarea cols="40" rows="15" name="post-details" form="create-post-form" placeholder="Enter the content for your post"></textarea>
               <button type="submit" class="create-btn">Create</button>
             </form>
           </div>

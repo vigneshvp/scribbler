@@ -28,8 +28,8 @@ function showSignInModal(){
     modal.style.display = "none";
   }
   
-  function navigateToBlogList(){
-    location.href = "html/bloglist.html"
+  function viewAllPosts(){
+    location.href = "postslist.html"
   }
 
   

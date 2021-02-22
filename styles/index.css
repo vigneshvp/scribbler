@@ -76,21 +76,21 @@ button.posts-button {
   input {
     padding: 10px;
     outline: none;
-    font-family: Abel;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   .label-text {
     font-weight: bold;
     margin: 10px 0;
-    font-family: Abel;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   .modal-content{
-    background-color: #fefefe;
+    background-color: white;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 40%;
+    width: 30%;
   }
   
   .modal-head {
@@ -140,7 +140,7 @@ button.posts-button {
   }
 
   .post-modal-content{
-    background-color: #fefefe;
+    background-color: white;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
